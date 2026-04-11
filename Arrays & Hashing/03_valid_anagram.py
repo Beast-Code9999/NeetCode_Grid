@@ -24,3 +24,22 @@
 s = "racecar"
 t = "carrace"
 
+from collections import Counter
+
+print(Counter(s) == Counter(t))
+
+# solution 2
+
+char_count_s = {}
+char_count_t = {}
+
+def count_characters(char_count, text):
+    for char in text:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    return char_count
+
+print(count_characters(char_count_s, s) == count_characters(char_count_t, t))
