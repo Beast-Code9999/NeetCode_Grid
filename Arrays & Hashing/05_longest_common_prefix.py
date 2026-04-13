@@ -23,4 +23,23 @@
 # 0 <= strs[i].length <= 200
 # strs[i] is made up of lowercase English letters if it is non-empty.
 
+strs = ["dance","dag","danger","damage"]
+
+def get_longest_common_prefix( array ):
+    """
+    return longest common prefix of strings in an array
+    """
+
+    output = ""
+
+    for i in range(len(strs[0])):
+        reference_caracters_of_first_item = strs[0][i]
+        for item in strs:
+            if i > len(item) or item[i] != reference_caracters_of_first_item:
+                return output
+
+        output += reference_caracters_of_first_item
+            
+
+print(get_longest_common_prefix(strs))
 
