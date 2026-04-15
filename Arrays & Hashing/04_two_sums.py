@@ -37,7 +37,7 @@ def two_sums(nums, target):
     checked_num = {}
 
     # add each number in dictionary and check complimentary number
-    for i, num in enumerate(nums):
+    for i, num in enumerate(nums): # creates a tuple of index and the value
         # find complimentary number
         compliment = target - num
 
